@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>Bicycle Pop Quiz</title>
+    <!-- bicycle picture from https://images.app.goo.gl/P2y3Z9gkfcdop8So7 -->
 </head>
 
 <body>
@@ -20,27 +21,49 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
+            <img class="main-logo" src="./assets/bicycle.jpg"/>
             <h2>
-                Welcome to Alchemy Bootstrap!
+                Welcome to the Pop Quiz!
             </h2>
 
             <content>
+            <h3>The Bicycle</h3>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
+                According to <a href="https://en.wikipedia.org/wiki/Bicycle" target="_blank">Wikipedia</a>, the bicycle also referred to as bike or cycle has been around since the 19th century. What we know as a bicycle today was originally referred to as a "safety bicycle", the original design had a large front wheel and did not have a chain.
             </p>
             <hr />
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
+                There are about as many types of bicycles and each type is specifically designed for a specific terrain. Various other types are built for as cross between multiple types, for a specific niche, or to simply be unusual.
             </p>
+            <p class="center">
+                <ul class="list">Common Types of Bicycles:
+                    <li>Road</li>
+                    <li>Stunt</li>
+                    <li>Mountain</li>
+                    <li>Tandem (Bicycle built for two)</li>
+                </ul>
+            </p>
+            <hr />
+            <p>
+                Maintaining a bicycle is fairly straight forward. Professional and constant riders will have their own maintenance schedule, but for the casual rider it is a good idea to check these items every season.
+            </p>
+            <p class="center">
+                <ol class="list">Top to Bottom Bicycle Checklist:
+                    <li>Check the brakes are working correctly</li>
+                    <li>Check the shifter working (if applicable)</li>
+                    <li>Check the seat height is correct</li>
+                    <li>Lubricate and clean the chain</li>
+                    <li>Check the tires for damage or excessive wear</li>
+                </ol>
+            </p>
+            <p>
+                Be sure to check your helmet for damage and be sure it fits!
+            </p>
+            <hr />
+            <p>
+                After learning all this about bicycles, you should be ready to <button id="quiz-button">Click Here</button> for a quiz!
+            </p>
+            <p id="quiz-grade"></p>
 
         </section>
     </main>
