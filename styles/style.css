@@ -100,3 +100,7 @@ footer {
   border: solid 10px var(--color2);
   border-radius: 8px;
 }
+
+.make-red {
+  color: red;
+}
