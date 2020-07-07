@@ -1,8 +1,67 @@
 // IMPORT MODULES under test here:
 // import example from '../example.js';
-import { isYes } from "../quizUtils.js";
+import { isYes, findPercent, checkPlural } from "../quizUtils.js";
 
 const test = QUnit.test;
+test("function should return a 's' if the number is not 1 and '' if number is 1", (expect) => {
+  //Arrange
+  // Set up your arguments and expectations
+  const num = 1,
+    num2 = 2,
+    num3 = 3,
+    num4 = 0;
+
+  const expected = "",
+    expected2 = "s",
+    expected3 = "s",
+    expected4 = "s";
+
+  //Act
+  // Call the function you're testing and set the result to a const
+  const actual = checkPlural(num);
+  const actual2 = checkPlural(num2);
+  const actual3 = checkPlural(num3);
+  const actual4 = checkPlural(num4);
+
+  //Expect
+  // Make assertions about what is expected versus the actual result
+  expect.equal(actual, expected);
+  expect.equal(actual2, expected2);
+  expect.equal(actual3, expected3);
+  expect.equal(actual4, expected4);
+});
+
+test("function should return a 2 digit number representing the percent of the num divided by the outOf numbers", (expect) => {
+  //Arrange
+  // Set up your arguments and expectations
+  const num = 1,
+    outOf = 3,
+    num2 = 2,
+    outOf2 = 3,
+    num3 = 3,
+    outOf3 = 3,
+    num4 = 0,
+    outOf4 = 3;
+
+  const expected = 33,
+    expected2 = 66,
+    expected3 = 100,
+    expected4 = 0;
+
+  //Act
+  // Call the function you're testing and set the result to a const
+  const actual = findPercent(num, outOf);
+  const actual2 = findPercent(num2, outOf2);
+  const actual3 = findPercent(num3, outOf3);
+  const actual4 = findPercent(num4, outOf4);
+
+  //Expect
+  // Make assertions about what is expected versus the actual result
+  expect.equal(actual, expected);
+  expect.equal(actual2, expected2);
+  expect.equal(actual3, expected3);
+  expect.equal(actual4, expected4);
+});
 
 test("if first letter is y test to true to indicate a yes response", (expect) => {
   //Arrange

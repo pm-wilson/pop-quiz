@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import isYes from "./quizUtils";
+import { isYes, findPercent, checkPlural } from "./quizUtils.js";
 
 const quizButton = document.getElementById("quiz-button"),
   quizGrade = document.getElementById("quiz-grade");
@@ -10,7 +10,7 @@ let quizCount = 0;
 // set event listeners to update state and DOM
 quizButton.addEventListener("click", () => {
   const quizName = prompt("What is your name?"),
-    quizReady = confirm("Are you ready for this?");
+    quizReady = confirm("Are you ready for this " + quizName + "?");
 
   let quizScore = 0;
 
@@ -28,12 +28,25 @@ quizButton.addEventListener("click", () => {
       quizAnswer3 = prompt(
         "Last question " +
           quizName +
-          ":\n Do you need to check your helmet for damage if it was fine yesterday?"
+          ":\n Do you still need to check your helmet for damage if it was fine yesterday?"
       );
 
     quizCount++;
 
+    if (isYes(quizAnswer1)) quizScore++;
+    if (!isYes(quizAnswer2)) quizScore++;
+    if (isYes(quizAnswer3)) quizScore++;
+
     quizGrade.textContent =
-      quizName + " you scored " + quizAnswer1 + quizAnswer2 + quizAnswer3;
+      quizName +
+      " you have taken this quiz " +
+      quizCount +
+      " time" +
+      checkPlural(quizCount) +
+      ". You scored " +
+      quizScore +
+      " for a " +
+      findPercent(quizScore, 3) +
+      "%!";
   }
 });
